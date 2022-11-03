@@ -1,0 +1,118 @@
+/*--------------------------------------------*/
+/* FARBEN */
+
+:root {
+    --color-kachel-on-foreground:       #333;
+    --color-kachel-on-background:       #ddd;
+    --color-kachel-off-foreground:      #999;
+    --color-kachel-off-background:      rgba(255,255,255, 0.15);
+}
+
+/*----------------------------------------------------------------*/
+/* KACHELN */
+
+/* KACHELN Allgemein */
+.kachel {
+    border-radius: 15px !important;
+    background: var(--color-kachel-off-background) !important;
+    background-image: none !important;
+    border: none !important;
+}
+
+/* KACHELN aktiv */
+.kachel.ui-state-active .vis-widget-body {
+    background: var(--color-kachel-on-background) !important;
+}
+
+/*--------------------------------------------*/
+/* MEATER */
+
+.meater.temp-aktuell-beschreibung {
+    color: #333;
+    text-align: center;
+}
+.meater.temp-ziel-wert {
+    color: #333;
+    text-align: center;
+}
+.meater.temp-umgebung-wert {
+    color: #333;
+    text-align: right;
+}
+.meater.temp-umgebung-beschreibung {
+    color: #888;
+    text-align: right;
+}
+.meater.zeit-verbleibend {
+    color: #333;
+    text-align: center;
+}
+.meater.zeit-aktualisierung {
+    color: #888;
+}
+.meater.gericht {
+    color: #333;
+    text-align: center;
+}
+.meater.status {
+    color: #888;
+    text-align: center;
+}
+
+.meater.klein.temp-ziel-wert {
+    font-size: 10px;
+}
+.meater.klein.zeit-verbleibend {
+    font-size: 10px;
+}
+.meater.klein.zeit-aktualisierung {
+    font-size: 10px;
+    text-align: center;
+}
+.meater.klein.gericht {
+    font-size: 14px;
+}
+
+.meater.gross.temp-aktuell-beschreibung {
+    font-size: 12px;
+}
+.meater.gross.temp-ziel-wert {
+    font-size: 12px;
+}
+.meater.gross.temp-umgebung-wert {
+    font-size: 16px;
+}
+.meater.gross.temp-umgebung-beschreibung {
+    font-size: 12px;
+}
+.meater.gross.zeit-verbleibend {
+    font-size: 14px;
+}
+.meater.gross.zeit-aktualisierung {
+    font-size: 12px;
+}
+.meater.gross.gericht {
+    font-size: 20px;
+}
+.meater.gross.status {
+    font-size: 12px;
+}
+
+/* Pulsierende Warnung */
+.meater.pulse-warn {
+    animation: pulse 2s infinite !important;
+}
+@keyframes pulse {
+    0% {
+        background-color: #f00;
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 1);
+    }
+    99% {
+        background-color: #fff;
+        box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+    }
+    100% {
+        background-color: #fff;
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+}
