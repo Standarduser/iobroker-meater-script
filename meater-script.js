@@ -89,12 +89,12 @@ function login() {
 function readFromCloud() {
 
     //Token ermitteln
-    if (!existsState(data_path + '.data.token') || (getState('0_userdata.0.Meater.data.token').val) == '') {
+    if (!existsState(data_path + '.data.token') || (getState(data_path + '.data.token').val) == '') {
         console.log('readFromCloud: Kein Token vorhanden --> Login ausführen')
         login();
     //Daten abrufen
     } else {
-        token = getState('0_userdata.0.Meater.data.token').val;
+        token = getState(data_path + '.data.token').val;
         console.debug('readFromCloud: Rufe Daten aus der Cloud ab')
 
         var request = require('request');
